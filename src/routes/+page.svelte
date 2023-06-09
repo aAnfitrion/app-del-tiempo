@@ -1,5 +1,6 @@
 <script>
   import { getWeatherFrom } from "../services/weather.js";
+  import WeatherFooter from '../components/weather-footer.svelte';
   const weatherPromise = getWeatherFrom()
 </script>
 
@@ -9,5 +10,6 @@
     <h3 class='text-8xl'>{weather.temperature}°</h3>
     <h2>{weather.conditionText}</h2>
     <h1>{weather.windSpeed}</h1>
+    <WeatherFooter />
   {/await}
 </div>
